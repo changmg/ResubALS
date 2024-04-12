@@ -1,0 +1,3 @@
+[submodule "abc"]
+	path = abc
+	url = git@github.com:changmg/abc.git
