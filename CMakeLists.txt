@@ -4,9 +4,8 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Set the project name
-project(alsrac)
+project(resubals)
 
 # Add sub directories
 add_subdirectory(abc)
-# add_subdirectory(espresso)
 add_subdirectory(als)

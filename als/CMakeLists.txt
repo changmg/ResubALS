@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Set the project name
-project(alsrac)
+project(resubals)
 
 # Set top directory
 set(TOP_DIR ${PROJECT_SOURCE_DIR}/..)
@@ -26,5 +26,5 @@ add_definitions(-DLIN64 -g -Wall -O3 -std=c++2a)
 set(EXECUTABLE_OUTPUT_PATH ${TOP_DIR})
 
 # Add an executable
-add_executable(alsrac.out ${sources})
-target_link_libraries(alsrac.out libabc -lm -ldl -rdynamic -lreadline -ltermcap -lpthread -lstdc++ -lrt -lstdc++fs -lboost_timer -lboost_system)
+add_executable(resubals.out ${sources})
+target_link_libraries(resubals.out libabc -lm -ldl -rdynamic -lreadline -ltermcap -lpthread -lstdc++ -lrt -lstdc++fs -lboost_timer -lboost_system)

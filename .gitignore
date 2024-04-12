@@ -9,7 +9,6 @@ tmp/
 test/
 add/
 mult/
-abc.rc
 *.tar
 c_circuit/*.csv
 abc.history

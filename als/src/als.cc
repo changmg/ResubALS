@@ -649,19 +649,19 @@ double ALSMan::Eval(NetMan& net, double err, bool useYosys, bool IsInitialCircui
     }
 
     // synthesize and technology mapping with Yosys
-    // if (!IsInitialCircuit && useYosys) { // (optional,) for obtaining better results
-    //     auto tempNet= net;
-    //     tempNet.CompileWithYosys(standCellPath);
-    //     tempNetArea = tempNet.GetArea();
-    //     tempNetDelay = tempNet.GetDelay();
-    //     if (DoubleLess(tempNetDelay, maxDelay) || DoubleGreat(recDelay, maxDelay)) { 
-    //         if (DoubleLess(tempNetArea, recArea) || 
-    //         (DoubleEqual(tempNetArea, recArea) && DoubleLess(tempNetDelay, recDelay)) ) {
-    //             recArea = tempNetArea;
-    //             recDelay = tempNetDelay;
-    //         }
-    //     }
-    // }
+    if (!IsInitialCircuit && useYosys) { // (optional,) for obtaining better results
+        auto tempNet= net;
+        tempNet.CompileWithYosys(standCellPath);
+        tempNetArea = tempNet.GetArea();
+        tempNetDelay = tempNet.GetDelay();
+        if (DoubleLess(tempNetDelay, maxDelay) || DoubleGreat(recDelay, maxDelay)) { 
+            if (DoubleLess(tempNetArea, recArea) || 
+            (DoubleEqual(tempNetArea, recArea) && DoubleLess(tempNetDelay, recDelay)) ) {
+                recArea = tempNetArea;
+                recDelay = tempNetDelay;
+            }
+        }
+    }
 
     // output and return
     cout << "current best: area = " << recArea << ", delay = " << recDelay << endl;
