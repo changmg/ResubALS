@@ -2,6 +2,9 @@
 
 This is an approximate logic synthesis flow that automatically generates approximate circuits under a user-specified error constraint.
 
+For more details, you can refer to the following paper:
+[Chang Meng, Alan Mishchenko, Weikang Qian, and Giovanni De Micheli, "*Efficient Resubstitution-Based Approximate Logic Synthesis*," in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2024.](https://ieeexplore.ieee.org/document/10772636)
+
 ## Dependencies 
 
 - Reference environment, **Ubuntu 20.04 LTS** with the following tools and libraries:
