@@ -43,6 +43,8 @@ For more details, you can refer to the following paper:
     sudo apt install yosys
     ```
 
+    Note that an old version of yosys will be installed using this command. The latest version of yosys might be incompatible with the ResubALS project.
+
 - **Alternatively, we prepare a docker image containing the dependencies:**
 
   https://hub.docker.com/r/changmeng/als_min
